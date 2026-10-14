@@ -3,7 +3,8 @@
   --ink: #3a2f28;
   --soft: #7d6b5d;
   --line: #d9cfc2;
-  --accent: #a0614f;
+  --accent: #b0705f;
+  --blush: #f3e2da;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -15,6 +16,7 @@ body {
 }
 
 img { display: block; width: 100%; height: auto; }
+main, .footer { overflow-x: clip; }
 a { color: inherit; }
 
 h1, h2, h3 {
@@ -97,7 +99,7 @@ main section { padding: 110px 5vw; }
 .section-head p { color: var(--soft); }
 
 /* La journée */
-.day { border-top: 1px solid var(--line); max-width: 1300px; margin: 0 auto; }
+.day { max-width: 1300px; margin: 0 auto; }
 .moments {
   list-style: none;
   display: grid;
@@ -110,7 +112,18 @@ main section { padding: 110px 5vw; }
 .moments p { color: var(--soft); font-size: .95rem; }
 
 /* Tarifs */
-.prices { background: #ece5db; }
+.prices {
+  position: relative;
+  overflow: hidden;
+  background: var(--blush) url("assets/flowers/pattern.svg") 0 0 / 200px auto;
+}
+.prices .section-head, .price-list {
+  background: #fbf8f4;
+  padding: 44px clamp(22px, 5vw, 56px);
+  box-shadow: 0 20px 50px -30px rgba(58, 47, 40, .35);
+}
+.prices .section-head { margin-bottom: 0; padding-bottom: 8px; }
+.price-list { padding-top: 8px; }
 .prices .section-head, .price-list { max-width: 760px; margin-left: auto; margin-right: auto; }
 .price { padding: 30px 0; border-bottom: 1px solid var(--line); }
 .price:first-child { border-top: 1px solid var(--line); }
@@ -144,17 +157,22 @@ main section { padding: 110px 5vw; }
   grid-template-columns: 1fr 1fr;
   gap: 6vw;
   max-width: 1150px; margin: 0 auto;
-  border-top: 1px solid var(--line);
 }
 .write__text p { margin-bottom: 1em; }
 .write__contact { margin-top: 1.6em; font-size: 1.25rem; line-height: 1.8; }
 .write__contact a { text-decoration: none; border-bottom: 1px solid var(--line); }
 
-.form { display: flex; flex-direction: column; gap: 20px; }
+.form {
+  position: relative;
+  display: flex; flex-direction: column; gap: 20px;
+  background: #fbf8f4;
+  padding: 36px 32px 40px;
+  border: 1px solid var(--line);
+}
 .form label { display: flex; flex-direction: column; gap: 4px; color: var(--soft); font-size: .9rem; }
 .form input, .form select, .form textarea {
   font: inherit; font-size: 1.05rem; color: var(--ink);
-  background: #fbf8f4;
+  background: #fff;
   border: 1px solid var(--line);
   padding: 10px 12px;
   border-radius: 2px;
@@ -172,12 +190,26 @@ main section { padding: 110px 5vw; }
 
 /* Pied de page */
 .footer {
-  padding: 40px 5vw 50px;
-  border-top: 1px solid var(--line);
+  padding: 0 5vw 50px;
   color: var(--soft);
   font-size: .9rem;
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
 }
+
+/* Fleurs */
+.fl { position: absolute; pointer-events: none; height: auto; }
+.intro__photo { position: relative; }
+.fl--intro { width: 52%; right: -24%; bottom: -15%; transform: scaleX(-1); }
+.fl--intro-top { width: 16%; left: -8%; top: -6%; transform: rotate(-18deg); }
+.fl--prices { width: 380px; right: -70px; top: -40px; transform: scaleY(-1) rotate(10deg); opacity: .9; }
+.prices .section-head, .price-list { position: relative; }
+.photos { position: relative; }
+.fl--photos { width: 70px; left: 1vw; top: 70px; }
+.fl--form { width: 230px; right: -60px; bottom: -70px; transform: scaleX(-1); }
+.fl--sign { display: inline-block; width: 46px; vertical-align: -18px; margin-right: 8px; }
+.divider { display: block; width: 260px; max-width: 70%; margin: 0 auto 70px; grid-column: 1 / -1; }
+.divider--footer { margin: 0 auto 30px; width: 200px; }
+.footer { flex-direction: column; align-items: center; text-align: center; }
 
 /* Agrandissement des photos */
 .lightbox {
@@ -198,6 +230,12 @@ main section { padding: 110px 5vw; }
   .moments { grid-template-columns: 1fr 1fr; }
   .moments li:nth-child(even) { margin-top: 40px; }
   .photo-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
+  .intro__photo { margin: 0 14% 50px 0; }
+  .fl--intro { width: 58%; right: -26%; }
+  .fl--prices { width: 240px; right: -60px; }
+  .fl--photos { display: none; }
+  .fl--form { width: 160px; right: -20px; bottom: -60px; }
+  .form { padding: 28px 20px 36px; }
 }
 
 @media (max-width: 640px) {

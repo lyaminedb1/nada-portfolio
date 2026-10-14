@@ -8,6 +8,7 @@ Site statique (HTML/CSS/JS, sans build) :
 - `styles.css` : mise en page et couleurs (Cormorant Garamond, EB Garamond)
 - `script.js` : menu mobile, agrandissement des photos, formulaire → message WhatsApp
 - `assets/img/` : photos optimisées
+- `assets/flowers/` : illustrations florales (SVG dessinés au trait)
 
 ## Voir le site en local
 
