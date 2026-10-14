@@ -4,9 +4,9 @@ Site portfolio de Nada, photographe de mariage à Paris.
 
 Site statique (HTML/CSS/JS, sans build) :
 
-- `index.html` : accueil, à propos, mission, services, formules & tarifs 2026–2027, galerie, réservation
-- `styles.css` : charte beige / taupe (Cormorant Garamond, Montserrat, Parisienne)
-- `script.js` : menu mobile, animations, lightbox, formulaire → message WhatsApp pré-rempli
+- `index.html` : accueil, présentation, la journée, tarifs 2026–2027, photos, contact
+- `styles.css` : mise en page et couleurs (Cormorant Garamond, EB Garamond)
+- `script.js` : menu mobile, agrandissement des photos, formulaire → message WhatsApp
 - `assets/img/` : photos optimisées
 
 ## Voir le site en local
@@ -24,5 +24,5 @@ Settings → Pages → Source : « Deploy from a branch » → choisir la branch
 ## Modifier
 
 - Tarifs / textes : directement dans `index.html`
-- Photos : remplacer les fichiers dans `assets/img/` (garder les mêmes noms) ou ajouter des `<figure>` dans la section `#galerie`
-- Numéro WhatsApp : constante `WHATSAPP_NUMBER` dans `script.js`
+- Photos : remplacer les fichiers dans `assets/img/` (garder les mêmes noms) ou ajouter des `<img>` dans la section `#photos`
+- Numéro WhatsApp : dans le lien `wa.me` de `script.js`
