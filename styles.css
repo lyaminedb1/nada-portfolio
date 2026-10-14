@@ -75,7 +75,7 @@ main section { padding: 110px 5vw; }
   margin-bottom: .6em;
 }
 .intro p { max-width: 30em; margin-bottom: 1.6em; color: var(--soft); }
-.intro__photo img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 60%; }
+.intro__photo img { aspect-ratio: 4 / 5; object-fit: cover; object-position: 58% 50%; }
 
 /* Lettre */
 .letter {
